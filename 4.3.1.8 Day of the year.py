@@ -59,12 +59,17 @@ def dayOfYear(year, month, day):
 	    return None
 	
     # Calculate the day of the year
+    #Create a new variable and set it equal to day.
+    #day_of_year is used to keep track of the cumulative day count as we iterate through the months. 
+    # ex: if your arguments are: year 2023, month = 2 and day = 15, the function initializes day_of_year to 15.
     day_of_year = day
 
-    # Iterate through months leading up to the given month
-    for m in range(1, month):
-        # Get the number of days in each month
-        days_in_previous_month = daysInMonth(year, m)
+    # Iterate through months leading up to the given month. It will iterate through all the months before the target month
+    # inside the loop, i takes on the values from 1(January) up to month - 1. Remember that's how we get the right index
+    for i in range(1, month):
+        # Get the number of days in each month.
+        #We are adding the days of the previous months to the day_of_year variable to keep track of the cumulative day count
+        days_in_previous_month = daysInMonth(year, i)
 
         # Check if the month is valid (daysInMonth didn't return None)
         if days_in_previous_month is None:
@@ -85,12 +90,3 @@ print(dayOfYear(0, 6, 10))     # Invalid year, returns None
 print(dayOfYear(2024, 13, 20))  # Invalid month, returns None
 
 
-
-
-
-
-# Test cases
-print(dayOfYear(2023, 2, 15))  # Valid input
-print(dayOfYear(2022, 4, 31))  # Invalid day, returns None
-print(dayOfYear(0, 6, 10))     # Invalid year, returns None
-print(dayOfYear(2024, 13, 20))  # Invalid month, returns None
