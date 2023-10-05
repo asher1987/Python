@@ -9,15 +9,23 @@
 
 # The code uses two lists ‒ one with the test data, and the other containing the expected results. 
 
-# The code will tell you if any of your results are invalid.
+# First Condition: It is a leap year if it is divisible by 4. 
+# Second Condition: It is a leap year if it is NOT (!) divisible by 100
+# Third Condition: It is a leap year if it is divisible by 400
+# If none of the conditions are met, it is NOT a leap year
 
 def isLeapYear(year):
-	# if the year is divisible by 4 and NOT divisible by 100 
-    # OR if the year is divisible by 400 and AND is divisible by 100 
-    if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0 and year % 100 == 0):
-        return True
-    else:
-        return False
+	if year % 4 == 0:
+		return True
+	elif year % 100 != 0:
+		return True
+	elif year % 400 == 0:
+		return True
+	else:
+		return False
+
+
+
 
 
 
