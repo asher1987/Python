@@ -89,4 +89,3 @@ print(dayOfYear(2022, 4, 31))  # Invalid day, returns None
 print(dayOfYear(0, 6, 10))     # Invalid year, returns None
 print(dayOfYear(2024, 13, 20))  # Invalid month, returns None
 
-
