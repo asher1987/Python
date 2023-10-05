@@ -23,7 +23,10 @@ def isLeapYear(year):
 		return True
 	else:
 		return False
-
+# First Condition: It is a leap year if it is divisible by 4
+# Second COndition: It is a leap year if it is NOT (!) divisible by 100
+# Third COndition: It is a leap year if it is divisible by 400
+# Else it is not a leap year
 
 
 
