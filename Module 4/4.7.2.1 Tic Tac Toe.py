@@ -80,7 +80,7 @@ while counter <= 9 and result == "Draw":
             time.sleep(1)
             compInput()
     else:
-        # hooman turn
+        # human turn
         userInput()
     score()
     counter += 1
