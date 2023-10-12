@@ -1,26 +1,15 @@
-class Player:
+class Suit:
+ 
+    SYMBOLS = {"clubs": "♣", "diamonds": "♦", "hearts": "♥", "spades": "♠"}
 
-    def __init__(self, name, deck, is_computer=False): 
-        self.name = name
-        self._deck = deck
-        self._is_computer = is_computer
+def __init__(self, description):
+    self._description = description
+    self._symbol = Suit.SYMBOLS[description.lower()]
 
-    @property
-    def is_computer(self):
-        return self._is_computer
-    
-    @property
-    def deck(self):
-        return self._deck
+@property
+def description(self):
+    return self._description
 
-    def has_empty_deck(self):
-        return self._deck.size == 0
-
-    def draw_card(self):
-        if not self.has_empty_deck():
-            return self._deck.draw()
-        else:
-            return None
-
-    def add_card(self, card):
-        self._deck.add(card)
+@property
+def symbol(self):
+    return self._symbol
